@@ -7,7 +7,7 @@ class Solution:
     nums.sort()
     if len(nums) < 4:
       return self.quadruplets
-    
+
     mid = (0 + len(nums)) // 2
     
     while len(nums) >= 1:
@@ -49,34 +49,18 @@ class Solution:
       num3 = nums[mid]
 
       nums = nums[:mid] + nums[mid+1:]
-      self.oneSum(nums[:], num1, num2, num3, target)
+
+      needed_num4 = target - num1 - num2 - num3
+      if needed_num4 in nums:
+          self.add_to_result([num1, num2, num3, needed_num4])
       
       mid = (0 + len(nums)) // 2
 
-    
-  def oneSum(self, nums, num1, num2, num3, target):
-    if len(nums) < 1:
-      return
-    
-    mid = (0 + len(nums)) // 2
-    
-    while len(nums) >= 1:
 
-      num4 = nums[mid]
-
-      if num1 + num2 + num3 + num4 == target:
-        candidate_quadruplet = list([num1, num2, num3, num4])
-        candidate_quadruplet.sort()
-        if candidate_quadruplet not in self.quadruplets:
-          self.quadruplets.append(candidate_quadruplet)
-      elif num1 + num2 + num3 + num4 < target:
-        nums = nums[mid+1:]
-      else:
-        nums = nums[:mid]
-        
-      nums = nums[:mid] + nums[mid+1:]
-      
-      mid = (0 + len(nums)) // 2
+  def add_to_result(self, candidate_quadruplet):
+    candidate_quadruplet.sort()
+    if candidate_quadruplet not in self.quadruplets:
+      self.quadruplets.append(candidate_quadruplet)
 
 
 def main():
