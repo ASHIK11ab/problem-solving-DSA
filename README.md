@@ -4,8 +4,8 @@ This branch contains problems on sorting.
 
 | Problems Index |
 | --- |
-| 1. [4Sum](#problem-title:-4sum) |
-
+| 1. [4Sum](#problem-title-4sum) |
+| 2. [Sort list of strings without built-in funcitons](#problem-title-sorting-list-of-names-without-built-in-functions)
 ### Problem Title: 4SUM
 
 #### Problem statement
@@ -68,6 +68,36 @@ and the remaining three numbers from the remaining list.
   <p>
     <img src="https://img.shields.io/static/v1?label=Memory&message=14.5 MB&color=blueviolet">
   </p>
+
+### Problem Title: Sorting list of names without built-in functions
+
+#### Problem statement
+```
+  Given a list of names as strings, sort them in ascending order.
+
+  Note: Do not use any built in functions.
+```
+
+#### Sample Input and Output
+```
+Input:
+  Size: 5
+  Names: [ Svc, CSE, engineeRing, college, College ]
+
+Output:
+  [ college, engineeRing, College, CSE, Svc ]
+
+Input:
+  Size: 4
+  Names: [ Aba, aaaac, bcd, ace ]
+
+Output:
+  [ aaaac, ace, bcd, Aba ]
+```
+
+#### Solution Implementation
+- The implementation to the solution can be found [here.](https://github.com/ASHIK11ab/problem-solving-DSA/tree/sorting/sort-array.cpp)
+
 
 ## Creator & Maintainer:
 <a href="https://github.com/ASHIK11ab">
